@@ -41,19 +41,22 @@ nav{
     box-shadow: 0px 2px 2px darkgray;
 }
 
-div.recolhido{
+div#recolhido{
     display: flex;
     gap: calc(100vw - 120px);
     width: calc(100vw - 20px);
     height: 50px;
+    color: #FF890A;
+    font-size: 1.4;
+    font-weight: bold;
 }
 
-div.recolhido>img#logo{
+div#recolhido>img#logo{
     width: 50px;
     height: 50px;
 }
 
-div.recolhido>button{
+div#recolhido>button{
     height: 50px;
     width: 50px;
     padding: 2.5px;
@@ -61,26 +64,31 @@ div.recolhido>button{
     border: 0;
     background-color: transparent;
 }
-div.recolhido>button>img{
+div#recolhido>button>img{
     width: 40px;
     height: 40px;
 }
 
-div.expandido{
+div#expandido{
     position: absolute;
-    display: none;
     
     width: 100vw;
     height: max-content;
 
-    margin: 20px 0px 0px -10px;
+    margin: 22px 0px 0px -10px;
     padding: 20px 10px;
     
     background-color: var(--white);
 
     box-shadow: 0px 2px 2px darkgray;
+
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
-div.expandido>a{
+div#expandido.ativo{
+    opacity: 1;
+}
+div#expandido>a{
     display: block;
     height: 30px;
     width: calc(80vw - 20px);
