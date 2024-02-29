@@ -177,7 +177,7 @@ section#tecnologias>div{
 }
 #tecnologias>div>article>p{
     margin: 20px 0px;
-    width: calc(100vw - 20px);
+    width: 100%;
     color: var(--dark);
 }
 table#tabela{
