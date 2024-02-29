@@ -7,9 +7,6 @@
     --dark: #1B1B69;
     --blue: #285EF3;
     --light: #c5d4fc;
-    --bg-white: linear-gradient(var(--white) 70%, var(--light));
-    --bg-blue: linear-gradient(var(--light) 70%, var(--white));
-    --bg-light-to-blue: linear-gradient(var(--light) 70%, var(--blue));
     --transparencia-quinze: rgba(0, 0, 0, 0.15);
     --transparencia-vinte: rgba(0, 0, 0, 0.2);
 }
@@ -20,12 +17,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body, html{
-    width: 100vw;
-}
 
 body{
-    
     background-color: white;
 }
 
@@ -53,7 +46,6 @@ div#recolhido{
 
 div#recolhido>img#logo{
     width: 50px;
-    height: 50px;
 }
 
 div#recolhido>button{
@@ -105,34 +97,44 @@ h1{
     font-size: 2em;
     padding: 20px 0;
 }
+h2{
+    font-size: 1.6em;
+}
+p{
+    font-size: 1.5em;
+}
 
 section#sobreMim{
     display: flex;
     align-items: center;
-    height: calc(100vh - 90px);
+    height: 100vh;
     padding: 20px 10px;
-    background: var(--bg-white);
 }
-
-section#sobreMim>div>h1{
+div.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40%;
+    max-width: 900px;
+}
+div.row>h1{
     display: inline-block;
-    width: calc(60vw - 10px);
+    width: 60%;
 }
 
 img#foto{
     display: inline-block;
-    width: calc(40vw - 20px);
-    height: calc((40vw - 20px) / 3 * 4);
+    width: 40%;
+    aspect-ratio: 1/1;
 }
 
 section#sobreMim>div>p{
     color: var(--dark);
-    font-size: 1.5em;
 }
 
 section#projetos{
     padding: 20px 10px;
-    background: var(--bg-blue);
+    background: var(--light);
 }
 
 div.Projeto{
@@ -142,8 +144,8 @@ div.Projeto{
     border-radius: 10px;
 }
 img.ImgProj{
-    width: calc(100vw - 40px);
-    height: calc((100vw - 40px) / 16 * 9);
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
 }
 
@@ -151,14 +153,14 @@ div.Projeto>h2{
     margin: 10px 0;
     padding: 0 5px;
     color: var(--darker);
-    font-size: 1.5em;
     background-color: var(--transparencia-vinte);
     border-radius: 5px;
 }
 div.Projeto>p{
     margin: 10px 0;
     padding: 2.5px 5px;
-    color: var(--dark);
+    color: var(--white);
+    font-weight: 500;
     background-color: var(--transparencia-vinte);
     border-radius: 5px;
 }
@@ -168,7 +170,6 @@ section#tecnologias{
     align-items: center;
     height: calc(100vh - 90px);
     padding: 20px 10px;
-    background: var(--bg-white);
 }
 section#tecnologias>div{
     display: flex;
@@ -180,7 +181,7 @@ section#tecnologias>div{
     color: var(--dark);
 }
 table#tabela{
-    width: calc(100vw - 20px);
+    width: 100%;
     background-color: var(--dark);
     font-size: 1.2em;
 }
@@ -270,34 +271,30 @@ thead{
 }
 
 #contato{
-    height: 400px;
     width: 100vw;
-    
     padding: 20px 10px;
-
-    background: var(--bg-light-to-blue);
+    background: var(--light);
 }
 
-#contato>ul{
+#contato>div>article>ul{
     list-style-type: none;
     width: fit-content;
     margin: 20px auto;
 }
-#contato>img{
+#contato>div>article>img{
     height: 50px;
     width: 50px;
 }
-#contato>ul>li>a{
+#contato>div>article>ul>li>a{
     display: flex;
     align-items: center;
     gap: 10px;
     height: 50px;
     color: var(--blue);
 
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
-
 
 #creditos{
     padding: 20px 10px;
@@ -305,11 +302,16 @@ thead{
     color: var(--white);
     text-align: center;
 }
+#creditos>p{
+    font-size: 1em;
+}
 #creditos>p>a{
     color: var(--light);
+    font-size: 1em;
     font-weight: bold;
 }
 #creditos>p>a:visited{
     color: var(--darker);
+    font-size: 1em;
     font-weight: bold;
 }

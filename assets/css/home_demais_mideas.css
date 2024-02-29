@@ -1,3 +1,76 @@
 @charset "UTF-8";
 
 /*Todas as demias mideas*/
+
+@media screen and (min-width: 768px){
+    /*Alterações no nav */
+    nav{
+        position: fixed;
+        display: flex;
+        gap: calc(100vw - 450px);
+        top: 0;
+        left: 0;
+        height: 90px;
+        width: 100vw;
+        padding: 20px 10px;
+        background-color: var(--blue);
+    
+        box-shadow: 0px 2px 2px darkgray;
+    }
+    div#recolhido{
+        height: 50px;
+        width: 50px;
+        color: #FF890A;
+        font-size: 1.4;
+        font-weight: bold;
+    }    
+        
+    div#recolhido>button, div#recolhido>button>img{
+        display: none;
+    }
+
+    div#expandido{
+        position: relative;
+        display: flex;
+        text-align: center;
+        gap: 10px;
+        height: 50px;
+        width: max-content;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    div#expandido>a{
+        display: inline-block;
+        width: max-content;
+        
+        margin: auto 0;
+        padding: 0;
+    
+        border-bottom: var(--white) 1px solid;
+    
+        font-size: 1.2em;
+        color: var(--white);
+    }
+    div.conteudo{
+        max-width: 900px;
+        margin: auto;
+    }
+    section#projetos>div>article{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    div.Projeto{
+        display: inline-block;
+        width: calc(50% - 5px);
+    }
+    div.Projeto>h2{
+        font-size: 1.4em
+    }
+    div.Projeto>p{
+        font-size: 1.2em
+    }
+}
